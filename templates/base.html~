@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+<head>
+    <title></title>
+    <style>
+    textarea {
+        height:50px;
+    }
+    body {
+        width:500px;
+        margin:auto;
+    }
+   </style>
+</head>
+<body>  
+     <img style="width:500px;margin:auto;" src="{% static 'img/dog.jpg' %}" alt="My image">
+    
+     <p>If you post comments with the following words <b>'stupid'</b>, <b>'idiot'</b>, <b>'loser'</b> in it, your comment will be deleted after 5 seconds, refresh page after 5 seconds to see </p>
+    
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

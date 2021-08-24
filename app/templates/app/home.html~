@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+
+
+<ul>
+{% for comment in comments %}
+  <li>{{ comment.comment }}</li>
+
+{% endfor %}
+</ul>
+
+
+{% endblock %}
